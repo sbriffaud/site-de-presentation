@@ -1,17 +1,41 @@
-.bande1{
-    width: 100%;
-    height: 100vh;
-
-    background-color: #689d71;
+@media (min-width: 426px) {
+    .bande1{
+        width: 100%;
+        height: 100vh;
     
-    color: #f0f0f0;
-    font-size: 25vh;
-    font-family: "Roboto", sans-serif;
-    text-align: center;
+        background-color: #689d71;
+        
+        color: #f0f0f0;
+        font-size: 25vh;
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+    }
+    
+    .bande1 span{
+        position: absolute;
+        left: 25vw;
+        top: 20vh;
+    }
 }
 
-.bande1 span{
-    position: absolute;
-    left: 25vw;
-    top: 20vh;
+/* Responsive pour TELEPHONE */
+
+@media (max-width: 426px) {
+    .bande1{
+        width: 100%;
+        height: 100vh;
+    
+        background-color: #689d71;
+        
+        color: #f0f0f0;
+        font-size: 5vh;
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+    }
+
+    .bande1 span{
+        position: absolute;
+        left: 30vw;
+        top: 10vh;
+    }
 }
