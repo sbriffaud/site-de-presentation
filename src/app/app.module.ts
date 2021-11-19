@@ -9,12 +9,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { AccueilComponent } from './components/accueil/accueil.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SideMenuComponent,
-    AccueilComponent
+    AccueilComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
