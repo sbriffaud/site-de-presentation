@@ -48,14 +48,28 @@
         text-align: center;
     }
 
-    .bande1 span{
+    .bande1 .text{
         position: absolute;
-        left: 30vw;
-        top: 10vh;
+        left: 17vw;
+        top: 40vh;
+
+        display: flex;
+        flex-direction: column;
+
+        animation: fadein-tel 2s;
+    }
+
+    .bande1 .sous-titre {
+        font-size: 2vh;
     }
 }
 
 @keyframes fadein {
     from { opacity: 0; top: 15vh; }
     to   { opacity: 1; top: 25vh; }
+}
+
+@keyframes fadein-tel {
+    from { opacity: 0; top: 30vh; }
+    to   { opacity: 1; top: 40vh; }
 }
