@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { sideMenuJSON } from 'src/app/mocks/side-manu-mock';
 
 @Component({
   selector: 'app-side-menu',
@@ -16,6 +17,8 @@ export class SideMenuComponent implements OnInit {
   animationTimingFunction: String;
   animationDuration: String;
   deconnectionSectionPaddingRight: String;
+
+  sideMenuItems = sideMenuJSON;
 
   constructor(private render: Renderer2, private elem: ElementRef) {
     this.isMenuOpened = false;
