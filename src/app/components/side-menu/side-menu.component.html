@@ -1,7 +1,7 @@
 <div class="sidebar" [style.width]="sidebarWidth">
     <div class="sidebar-header">
       <span class="sidebar-title"
-      [style.opacity]="sidebarOpacity"
+      [style.opacity]="sidebarItemOpacity"
       [style.animation-name]="animationName"
       [style.animation-iteration-count]="animationIterationCount"
       [style.animation-timing-function]="animationTimingFunction"
@@ -13,17 +13,17 @@
     <ul class="sidebar-items">
       <li>
         <input type="text" placeholder="Rechercher..."
-        [style.opacity]="sidebarOpacity"
+        [style.opacity]="sidebarItemOpacity"
         [style.animation-name]="animationName"
         [style.animation-iteration-count]="animationIterationCount"
         [style.animation-timing-function]="animationTimingFunction"
         [style.animation-duration]="animationDuration">
       </li>
       <li *ngFor="let item of sideMenuItems">
-        <a href="#">
+        <a href="{{ item.path }}">
           <mat-icon>{{ item.iconName }}</mat-icon>
           <span class="sidebar-item-accueil"
-          [style.opacity]="sidebarOpacity"
+          [style.opacity]="sidebarItemOpacity"
           [style.animation-name]="animationName"
           [style.animation-iteration-count]="animationIterationCount"
           [style.animation-timing-function]="animationTimingFunction"
@@ -32,20 +32,16 @@
       </li>
     </ul>
     <div class="sidebar-footer">
-      <div class="footer-items">
-        <div class="profile"
-        [style.opacity]="sidebarOpacity"
-        [style.animation-name]="animationName"
-        [style.animation-iteration-count]="animationIterationCount"
-        [style.animation-timing-function]="animationTimingFunction"
-        [style.animation-duration]="animationDuration">
-          <img class="img-profile" src="https://media-exp1.licdn.com/dms/image/C5603AQHnr_CsffdV8Q/profile-displayphoto-shrink_200_200/0/1596692045954?e=1641427200&v=beta&t=vUS4xJjhVvzC8HvAmV0gTAI66pvLgTlMj_N-ioMZdf4" alt="image_profile">
-          <span class="nom-complet">Simon BRIFFAUD</span>
-        </div>
-        <div class="deconnexion">
-          <mat-icon>power_settings_new</mat-icon>
-          <span class="tooltip">Déconnexion</span>
-        </div>
+      <!--
+      <div class="profile">
+        <img class="img-profile" src="https://media-exp1.licdn.com/dms/image/C5603AQHnr_CsffdV8Q/profile-displayphoto-shrink_200_200/0/1596692045954?e=1641427200&v=beta&t=vUS4xJjhVvzC8HvAmV0gTAI66pvLgTlMj_N-ioMZdf4" alt="image_profile">
+        <span class="profile-tooltip">Apprenez à me connaître !</span>
+      </div>
+      -->
+
+      <div class="profile">
+        <img class="img-profile" src="https://media-exp1.licdn.com/dms/image/C5603AQHnr_CsffdV8Q/profile-displayphoto-shrink_200_200/0/1596692045954?e=1641427200&v=beta&t=vUS4xJjhVvzC8HvAmV0gTAI66pvLgTlMj_N-ioMZdf4" alt="image_profile">
+        <span class="tooltip">Apprenez à me connaître !</span>
       </div>
     </div>
   </div>

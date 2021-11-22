@@ -2,18 +2,22 @@ export const sideMenuItemsJSON =
 [
     {
         "pageName":"Accueil",
-        "iconName":"home"
+        "iconName":"home",
+        "path":"accueil"
     },
     {
         "pageName":"Qui suis-je ?",
-        "iconName":"person"
+        "iconName":"person",
+        "path":"qui-suis-je"
     },
     {
         "pageName":"Mes travaux",
-        "iconName":"devices"
+        "iconName":"devices",
+        "path":"mes-travaux"
     },
     {
         "pageName":"Me contacter",
-        "iconName":"contacts"
+        "iconName":"contacts",
+        "path":"contact"
     }
 ]
