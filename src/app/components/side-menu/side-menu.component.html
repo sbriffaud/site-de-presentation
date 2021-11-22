@@ -19,59 +19,15 @@
         [style.animation-timing-function]="animationTimingFunction"
         [style.animation-duration]="animationDuration">
       </li>
-      <li>
+      <li *ngFor="let item of sideMenuItems">
         <a href="#">
-          <mat-icon>home</mat-icon>
+          <mat-icon>{{ item.iconName }}</mat-icon>
           <span class="sidebar-item-accueil"
           [style.opacity]="sidebarOpacity"
           [style.animation-name]="animationName"
           [style.animation-iteration-count]="animationIterationCount"
           [style.animation-timing-function]="animationTimingFunction"
-          [style.animation-duration]="animationDuration">Accueil</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <mat-icon>person</mat-icon>
-          <span class="sidebar-item-profile"
-          [style.opacity]="sidebarOpacity"
-          [style.animation-name]="animationName"
-          [style.animation-iteration-count]="animationIterationCount"
-          [style.animation-timing-function]="animationTimingFunction"
-          [style.animation-duration]="animationDuration">Profil</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <mat-icon>groups</mat-icon>
-          <span class="sidebar-item-equipe"
-          [style.opacity]="sidebarOpacity"
-          [style.animation-name]="animationName"
-          [style.animation-iteration-count]="animationIterationCount"
-          [style.animation-timing-function]="animationTimingFunction"
-          [style.animation-duration]="animationDuration">L'équipe</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <mat-icon>location_on</mat-icon>
-          <span class="sidebar-item-localisation"
-          [style.opacity]="sidebarOpacity"
-          [style.animation-name]="animationName"
-          [style.animation-iteration-count]="animationIterationCount"
-          [style.animation-timing-function]="animationTimingFunction"
-          [style.animation-duration]="animationDuration">Localisation</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <mat-icon>contact_mail</mat-icon>
-          <span class="sidebar-item-contacte"
-          [style.opacity]="sidebarOpacity"
-          [style.animation-name]="animationName"
-          [style.animation-iteration-count]="animationIterationCount"
-          [style.animation-timing-function]="animationTimingFunction"
-          [style.animation-duration]="animationDuration">Nous contacter</span>
+          [style.animation-duration]="animationDuration">{{ item.pageName }}</span>
         </a>
       </li>
     </ul>
