@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
-import { sideMenuJSON } from 'src/app/mocks/side-manu-mock';
+import { sideMenuJSON } from 'src/app/mocks/side-menu-mock';
 
 @Component({
   selector: 'app-side-menu',
