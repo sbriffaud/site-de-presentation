@@ -3,9 +3,17 @@
     height: auto;
 }
 
-.main .reseaux {
+.main .color-selector {
     position: absolute;
-    right: 1vw;
-    top: 2vh;
+    right: 20px;
+    top: 30px;
     text-align: center;
+}
+
+.main .color-selector button {
+    height: 20px;
+    width: 20px;
+    border-color: #000;
+    border-width: 2px;
+    border-radius: 4px;
 }
