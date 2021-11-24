@@ -7,9 +7,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { AccueilComponent } from './components/accueil/accueil.component';
 import { FooterComponent } from './components/footer/footer.component';
+
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
@@ -24,6 +27,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
+    MatMenuModule,
     FontAwesomeModule
   ],
   providers: [],
