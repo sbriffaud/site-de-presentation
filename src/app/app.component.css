@@ -29,12 +29,16 @@
     border-color: #000;
     border-width: 2px;
 
-    box-shadow: 2px 2px 5px #000;
+    box-shadow: 1px 1px 5px #000;
 
     transition: all 0.2s ease;
 }
 
 .main .footer .color-selector .color-selector-menu-button:hover {
+    box-shadow: 2px 2px 5px #000;
+}
+
+.main .footer .color-selector .color-selector-menu-button:active {
     box-shadow: 1px 1px 5px #000;
 }
 
@@ -47,17 +51,26 @@
     left: 1px;
 }
 
+::ng-deep .cdk-overlay-pane {
+    border-color: #000;
+    border-width: 20px;
+}
+
 ::ng-deep .mat-menu-panel {
     background-color: #c0c0c0;
+    border-radius: 4px !important;
+    border: solid black !important;
+    border-width: 2px !important;
+
     position: relative;
-    min-width: 1pw !important;
-    width: 120px;
+    min-width: 1px !important;
+    width: 160px;
     min-height: 1px !important;
     height: 55px;
 
     margin-bottom: 10px;
 
-    box-shadow: 1px 1px 5px;
+    box-shadow: 2px 2px 5px;
 }
 
 ::ng-deep .mat-menu-content{
@@ -69,6 +82,8 @@
   }
 
 .color-selection-button {
+    position: relative;
+
     height: 25px;
     width: 25px;
 
@@ -83,6 +98,15 @@
     transition: all 0.2s ease;
 }
 
+.color-selected-check {
+    font-size: 12px;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-6px);
+    left: -1.5px;
+}
+
 .color-selection-button:hover {
-    box-shadow: 1px 1px 5px #000;
+    box-shadow: 2px 2px 5px #000;
 }

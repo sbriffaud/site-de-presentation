@@ -11,7 +11,9 @@
                 <button *ngFor="let button of colorSelectorButtons"
                         (click)="setBackgroundColor(button.color)"
                         class="color-selection-button"
-                        [style.background-color]="button.color"></button>
+                        [style.background-color]="button.color">
+                    <mat-icon *ngIf="backgroundColor == button.color" class="color-selected-check">circle</mat-icon>
+                </button>
             </mat-menu>
         </div>
     </div>

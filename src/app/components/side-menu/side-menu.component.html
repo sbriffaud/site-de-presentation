@@ -8,10 +8,11 @@
       [style.animation-duration]="animationDuration">MENU</span>
       <div class="sidebar-btn" (click)="toggleMenu()">
         <mat-icon *ngIf="isMenuOpened == false">menu</mat-icon>
-        <mat-icon *ngIf="isMenuOpened == true">close</mat-icon>
+        <mat-icon *ngIf="isMenuOpened == true" class="btn-close-menu">close</mat-icon>
       </div>
     </div>
     <ul class="sidebar-items">
+      <!--
       <li>
         <input type="text" placeholder="Rechercher..."
         [style.opacity]="sidebarItemOpacity"
@@ -20,6 +21,7 @@
         [style.animation-timing-function]="animationTimingFunction"
         [style.animation-duration]="animationDuration">
       </li>
+      -->
       <li *ngFor="let item of sideMenuItems">
         <a href="{{ item.path }}" *ngIf="item.targetBlank == 'non'">
           <mat-icon>{{ item.iconName }}</mat-icon>
