@@ -11,7 +11,6 @@ import { MatMenuModule } from '@angular/material/menu';
 
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { AccueilComponent } from './components/accueil/accueil.component';
-import { FooterComponent } from './components/footer/footer.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -19,8 +18,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   declarations: [
     AppComponent,
     SideMenuComponent,
-    AccueilComponent,
-    FooterComponent
+    AccueilComponent
   ],
   imports: [
     BrowserModule,

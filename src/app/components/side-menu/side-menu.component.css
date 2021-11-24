@@ -140,7 +140,7 @@
     transition: all 0.4s ease;
 }
 
-.sidebar .sidebar-footer .profile img {
+.sidebar .sidebar-footer .profile .img-profile {
     border-radius: 35px;
     height: 6.5vh;
     width: 6.5vh;
