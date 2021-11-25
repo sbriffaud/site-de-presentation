@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 
@@ -21,12 +22,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AccueilComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    BrowserModule,
+    DragDropModule,
+    FontAwesomeModule,    
     MatIconModule,
-    MatMenuModule,
-    FontAwesomeModule
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

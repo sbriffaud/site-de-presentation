@@ -1,7 +1,7 @@
 <div class="sidebar" [style.width]="sidebarWidth">
     <div class="sidebar-header">
       <span class="sidebar-title"
-      [style.opacity]="sidebarItemOpacity"
+      [style.visibility]="sidebarTitleVisibility"
       [style.animation-name]="animationName"
       [style.animation-iteration-count]="animationIterationCount"
       [style.animation-timing-function]="animationTimingFunction"
@@ -12,16 +12,6 @@
       </div>
     </div>
     <ul class="sidebar-items">
-      <!--
-      <li>
-        <input type="text" placeholder="Rechercher..."
-        [style.opacity]="sidebarItemOpacity"
-        [style.animation-name]="animationName"
-        [style.animation-iteration-count]="animationIterationCount"
-        [style.animation-timing-function]="animationTimingFunction"
-        [style.animation-duration]="animationDuration">
-      </li>
-      -->
       <li *ngFor="let item of sideMenuItems">
         <a href="{{ item.path }}" *ngIf="item.targetBlank == 'non'">
           <mat-icon>{{ item.iconName }}</mat-icon>
@@ -45,8 +35,30 @@
     </ul>
     <div class="sidebar-footer">
       <div class="profile">
-        <img class="img-profile" src="https://media-exp1.licdn.com/dms/image/C5603AQHnr_CsffdV8Q/profile-displayphoto-shrink_400_400/0/1596692045954?e=1643241600&v=beta&t=yjVtuN4jU17UrV2mlBkWANHXkED2Tc9mbFxU7fVi5vI" alt="image_profile">
-        <span class="tooltip">Apprenez à me connaître !</span>
+        <img class="img-profile"
+          src="https://media-exp1.licdn.com/dms/image/C5603AQHnr_CsffdV8Q/profile-displayphoto-shrink_400_400/0/1596692045954?e=1643241600&v=beta&t=yjVtuN4jU17UrV2mlBkWANHXkED2Tc9mbFxU7fVi5vI"
+          alt="image_profile"
+          (click)="toggleTooltipText()">
+        <span class="tooltip" id="tooltip1" *ngIf="tooltipTextNum == 1">
+          <span class="tooltip-text">
+            <span [style.color]="'red'">&nbsp;<b>Cliquez </b></span>!
+          </span>
+        </span>
+        <span class="tooltip" id="tooltip2" *ngIf="tooltipTextNum == 2">
+          <span class="tooltip-text">
+            Bonjour ! Moi c'est <span [style.color]="'red'">&nbsp;<b>Simon</b></span>.
+          </span>
+        </span>
+        <span class="tooltip" id="tooltip3" *ngIf="tooltipTextNum == 3">
+          <span class="tooltip-text">
+            Je développe des <span [style.color]="'red'"><b>applis Web et Mobile</b></span>&nbsp;!
+          </span>
+        </span>
+        <span class="tooltip" id="tooltip4" *ngIf="tooltipTextNum == 4">
+          <span class="tooltip-text">
+            <span [style.color]="'red'"><b>Découvrez-moi</b></span> avec ce site !
+          </span>
+        </span>
       </div>
     </div>
   </div>

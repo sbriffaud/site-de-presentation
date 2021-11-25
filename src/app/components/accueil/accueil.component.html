@@ -1,7 +1,30 @@
 <div class="main">
     <div class="text">
         <span class="titre">Bienvenue</span>
-        <span class="sous-titre">Le site est en cours de construction...</span>
-        <i class="fa fa-twitter-square"></i>
+        <span class="sous-titre">Vous avez soif ?</span>        
     </div>
+
+    <div class="cases">
+        <div *ngFor="let char of mot" class="case-lettre"></div>
+    </div>
+
+    <img src="https://cdn-icons-png.flaticon.com/512/6122/6122825.png" class="robinet">
+    <mat-icon class="goutte">water_drop</mat-icon>
+
+    <img src="https://cdn-icons.flaticon.com/png/512/3261/premium/3261893.png?token=exp=1637797390~hmac=dbe7a5ec9363d0202b4f5e542922fa70" class="brasier">
+
+    <div id="smoke">
+        <span class="s0"></span>
+        <span class="s1"></span>
+        <span class="s2"></span>
+        <span class="s3"></span>
+        <span class="s4"></span>
+        <span class="s5"></span>
+        <span class="s6"></span>
+        <span class="s7"></span>
+        <span class="s8"></span>
+        <span class="s9"></span>
+      </div>
+
+    <span *ngFor="let char of mot" class="lettre" id="lettre-{{char.position}}" cdkDrag>{{ char.lettre }}</span>
 </div>

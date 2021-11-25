@@ -17,8 +17,9 @@
 
         color: #f0f0f0;
         font-family: "Roboto", sans-serif;
+        user-select: none;
 
-        animation: fadein 2s;
+        animation: fadein-down 2s;
     }
     
     .main .titre{
@@ -50,6 +51,8 @@
         left: 17vw;
         top: 40vh;
 
+        user-select: none;
+
         display: flex;
         flex-direction: column;
 
@@ -62,7 +65,224 @@
     }
 }
 
-@keyframes fadein {
+/* Commun à tous les supports */
+
+/* Lettres de GOUTTE */
+
+.lettre {
+    position: absolute;
+    z-index: 99;
+
+    font-size: 25px;
+    user-select: none;
+
+    animation: fadeIn 15s;
+}
+
+#lettre-1 {
+    left: 750px;
+    bottom: 20px;
+
+    transform: rotate(304deg);
+
+    color: #689d71;
+}
+
+#lettre-2 {   
+    right: 126px;
+    bottom: 227px;
+
+    transform: rotate(121deg);
+
+    color: #227475;
+}
+
+#lettre-3 {
+    left: 359px;
+    top: 152px;
+
+    transform: rotate(244deg);
+
+    color: #2f3e4d;
+}
+
+#lettre-4 {
+    right: 455px;
+    top: 50px;
+
+    transform: rotate(279deg);
+
+    color: #689d71;
+}
+
+#lettre-5 {
+    left: 780px;
+    bottom: 50px;
+
+    transform: rotate(137deg);
+
+    color: #540b4a;
+}
+
+#lettre-6 {
+    left: 274px;
+    bottom: 194px;
+
+    transform: rotate(94deg);
+
+    color: #227475;
+}
+
+/* Cases pour les lettres */
+.cases {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 15vw;
+
+    position: absolute;
+    top: 20px;
+    right: 2vw;
+}
+
+.cases .case-lettre {
+    border: solid black;
+    border-radius: 10px;
+
+    height: 30px;
+    width: 30px;
+}
+
+/* ROBINET */
+
+.robinet {
+    height: 40px;
+    width: 40px;
+
+    position: absolute;
+    top: 15px;
+    left: 5.5vw;
+    z-index: 2;;
+
+    transform: rotateY(180deg);
+}
+
+/* GOUTTE */
+.goutte {
+    visibility: hidden;
+
+    position: absolute;
+    z-index: 1;
+
+    animation: waterDrop 5s infinite;
+
+    color: #7ba0c4;
+    -webkit-text-stroke: 1px black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+    text-align: center;
+}
+
+@media (min-width: 426px){
+    .goutte {
+        left: 107px;
+    }
+}
+
+@media (max-width: 426px){
+    .goutte {
+        left: 30px;
+    }
+}
+
+@keyframes waterDrop {
+    0%   { transform: scale(0) translate(0, 0); top: 35px; opacity: 0; }
+    20%  { transform: scale(1) translate(0, -5px); top: 60px; opacity: 1; }
+    30%  { transform: scale(1) translate(0, -5px); top: 60px; opacity: 1; }
+    100% { transform: scale(1) translate(-20px, -130px); top: 200vh; }
+}
+
+/* BRASIER */
+
+.brasier {
+    position: absolute;
+    left: 49.75%;
+    bottom: 5px;
+    z-index: 1;
+
+    height: 40px;
+    width: 40px;
+
+    animation: fadeIn 1s;
+}
+
+/* SMOKE EFFECT */
+/* Smoke container */
+
+#smoke {
+	position: absolute;
+	z-index: 3;
+	width: 1px; height: 160px;
+	left: 50%; bottom: 55px;
+}
+
+/* smoke balls */
+
+#smoke span { 
+    display: block;
+	position: absolute;
+    left: -14px;
+	bottom: -35px;
+    left: 50%;
+
+    margin-left:-20px;
+
+	height: 0px; width: 0px;
+	border: 35px solid #4b4b4b;
+	border-radius: 35px;
+	
+    opacity: 0;
+	transform: scale(0.2);
+}
+
+/* Smoke animation */
+
+@keyframes smokeL {
+	0%   { transform: scale(0.2) translate(0, 0) }
+	10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
+	100% { opacity: 0; transform: scale(1) translate(-20px, -130px) }
+}
+
+@keyframes smokeR {
+	0%   { transform: scale(0.2) translate(0, 0) }
+	10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
+	100% { opacity: 0; transform: scale(1) translate(20px, -130px) }
+}
+
+#smoke .s0 { animation: smokeL 10s 0s infinite }
+#smoke .s1 { animation: smokeR 10s 1s infinite }
+#smoke .s2 { animation: smokeL 10s 2s infinite }
+#smoke .s3 { animation: smokeR 10s 3s infinite }
+#smoke .s4 { animation: smokeL 10s 4s infinite }
+#smoke .s5 { animation: smokeR 10s 5s infinite }
+#smoke .s6 { animation: smokeL 10s 6s infinite }
+#smoke .s7 { animation: smokeR 10s 7s infinite }
+#smoke .s8 { animation: smokeL 10s 8s infinite }
+#smoke .s9 { animation: smokeR 10s 9s infinite }
+
+/* Animations */
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1;}
+}
+
+@keyframes fadein-down {
     from { opacity: 0; top: 15vh; }
     to   { opacity: 1; top: 25vh; }
 }
