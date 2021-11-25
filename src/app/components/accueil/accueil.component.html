@@ -4,12 +4,13 @@
         <span class="sous-titre">Vous avez soif ?</span>        
     </div>
 
-    <div class="cases">
-        <div *ngFor="let char of mot" class="case-lettre"></div>
+    <div class="cases" #cases>
+        <div #case *ngFor="let char of mot" class="case-lettre" id="case-{{char.position}}"
+            [style.height]="setCaseHeight(30, case)"></div>
     </div>
 
     <img src="https://cdn-icons-png.flaticon.com/512/6122/6122825.png" class="robinet">
-    <mat-icon class="goutte">water_drop</mat-icon>
+    <mat-icon class="goutte" [style.visibility]="waterDropVisibility">water_drop</mat-icon>
 
     <img src="https://cdn-icons.flaticon.com/png/512/3261/premium/3261893.png?token=exp=1637797390~hmac=dbe7a5ec9363d0202b4f5e542922fa70" class="brasier">
 
@@ -26,5 +27,5 @@
         <span class="s9"></span>
       </div>
 
-    <span *ngFor="let char of mot" class="lettre" id="lettre-{{char.position}}" cdkDrag>{{ char.lettre }}</span>
+    <span #lettreCachee *ngFor="let char of mot" class="lettre" id="lettre-{{char.position}}" cdkDrag (click)="isLetterInRightBox(lettreCachee, char.position)">{{ char.lettre }}</span>
 </div>

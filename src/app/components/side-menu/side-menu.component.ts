@@ -28,7 +28,7 @@ export class SideMenuComponent implements OnInit {
   constructor(private render: Renderer2, private elem: ElementRef) {
     this.isMenuOpened = false;
 
-    this.sidebarWidth = '3.5vw';
+    this.sidebarWidth = '55px';
 
     this.sidebarTitleVisibility = "hidden";
     this.sidebarItemOpacity = '0';
@@ -47,7 +47,7 @@ export class SideMenuComponent implements OnInit {
   toggleMenu(): void {
 
     if(this.isMenuOpened == true) {
-      this.sidebarWidth = '3.5vw';
+      this.sidebarWidth = '55px';
 
       this.sidebarTitleVisibility = "hidden";
       this.sidebarItemOpacity = '0';
@@ -58,7 +58,7 @@ export class SideMenuComponent implements OnInit {
       this.animationDuration = "0.2s";
     }
     else if(this.isMenuOpened == false) {
-      this.sidebarWidth = '15vw';
+      this.sidebarWidth = '230px';
 
       this.sidebarTitleVisibility = "visible";
       this.sidebarItemOpacity = '1';

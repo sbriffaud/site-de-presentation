@@ -139,18 +139,17 @@
     flex-direction: row;
     justify-content: space-between;
 
-    width: 15vw;
+    width: 250px;
 
     position: absolute;
     top: 20px;
-    right: 2vw;
+    right: 30px;
 }
 
 .cases .case-lettre {
     border: solid black;
     border-radius: 10px;
 
-    height: 30px;
     width: 30px;
 }
 
@@ -162,7 +161,7 @@
 
     position: absolute;
     top: 15px;
-    left: 5.5vw;
+    left: 85px;
     z-index: 2;;
 
     transform: rotateY(180deg);
@@ -170,8 +169,6 @@
 
 /* GOUTTE */
 .goutte {
-    visibility: hidden;
-
     position: absolute;
     z-index: 1;
 

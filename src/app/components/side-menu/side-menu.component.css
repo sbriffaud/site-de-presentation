@@ -1,6 +1,7 @@
 .sidebar {
     position: fixed;
     height: 100vh;
+    min-width: 55px !important;
 
     padding: 2vh 1vw;
 
@@ -215,16 +216,6 @@
 @media (max-width: 426px) {
     .sidebar {
         visibility: hidden;
-
-        position: fixed;
-        height: 100vh;
-    
-        padding: 2vh 3vw;
-    
-        background-color: red;
-        opacity: 90%;
-    
-        transition: all 0.5s ease;
     }
 }
 
